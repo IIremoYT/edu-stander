@@ -21,4 +21,11 @@
 
 ## Screenshots (صور من الموقع)
 
-*Screenshots will be uploaded here shortly!*
+### 🏠 Home Page (الصفحة الرئيسية)
+![Home](public/screenshots/home.png)
+
+### 📚 Courses Page (صفحة الكورسات)
+![Courses](public/screenshots/courses.png)
+
+### 🎓 Student Dashboard (لوحة تحكم الطالب)
+![Student Dashboard](public/screenshots/dashboard.png)
