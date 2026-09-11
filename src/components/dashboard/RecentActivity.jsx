@@ -25,7 +25,7 @@ export default function RecentActivity() {
           {/* Vertical Line */}
           <div className="absolute right-[19px] top-4 bottom-4 w-px bg-muted" />
 
-          {activities.map((activity, index) => {
+          {activities.map((activity) => {
             const Icon = iconMap[activity.iconType] || Clock;
             
             return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BookOpen, PlayCircle, FileText } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
@@ -81,12 +82,12 @@ export default function Courses() {
                     </div>
                   </div>
 
-                  <a 
-                    href="#" 
+                  <Link 
+                    to={`/course-details/${idx + 1}`}
                     className="block w-full text-center bg-transparent text-primary border border-border font-semibold py-2.5 rounded-md hover:bg-accent hover:text-white hover:border-accent transition-colors"
                   >
                     اشترك الآن
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Reveal>

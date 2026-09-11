@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import StudentLayout from '../../components/student/StudentLayout';
 import { mockStudentData } from '../../data/mockStudentData';
-import { Search, Filter, BookOpen } from 'lucide-react';
+import { Search, BookOpen } from 'lucide-react';
 import EnrolledCourseCard from '../../components/student/courses/EnrolledCourseCard';
 import { motion } from 'framer-motion';
 

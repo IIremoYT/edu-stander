@@ -181,7 +181,7 @@ export default function LearningPage() {
                 التالي
               </h3>
               <div className="space-y-3">
-                {learningPath.nextSteps.map((step, idx) => {
+                {learningPath.nextSteps.map((step) => {
                   const Icon = stepIcons[step.type] || FileText;
                   return (
                     <div key={step.id} className={`flex items-start gap-3 p-3 rounded-xl border ${step.isLocked ? 'bg-gray-50 border-transparent opacity-60' : 'bg-background border-border hover:border-accent/50 cursor-pointer transition-colors'}`}>

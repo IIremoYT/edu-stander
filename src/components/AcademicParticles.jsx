@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const particleData = [
@@ -36,12 +36,13 @@ const particleData = [
 
 export default function AcademicParticles({ count = 25, className = '' }) {
   const shouldReduceMotion = useReducedMotion();
+  const [particles, setParticles] = useState([]);
 
-  const particles = useMemo(() => {
+  useEffect(() => {
     const shuffled = [...particleData].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, Math.min(count, shuffled.length));
     
-    return selected.map((data, i) => {
+    const newParticles = selected.map((data, i) => {
       const layers = ['layer1', 'layer2', 'layer3'];
       const layer = layers[i % 3];
       const speed = layer === 'layer1' ? 0.3 : layer === 'layer2' ? 0.5 : 0.7;
@@ -69,6 +70,8 @@ export default function AcademicParticles({ count = 25, className = '' }) {
         delay
       };
     });
+    
+    setParticles(newParticles);
   }, [count]);
 
   const layerStyles = {

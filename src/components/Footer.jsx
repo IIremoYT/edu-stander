@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -8,14 +9,14 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="font-heading font-bold text-3xl text-white mb-4">
+            <Link to="/" className="font-heading font-bold text-3xl text-white mb-4 block">
               Stander<span className="text-accent">.</span>
-            </div>
+            </Link>
             <p className="text-hero-muted text-sm leading-relaxed mb-6 pe-4">
               منصة تعليمية متخصصة في مناهج اللغة الإنجليزية للمرحلة الثانوية مع مستر عبدالمعبود.
             </p>
             <div className="flex items-center gap-4">
-              {/* Social Icons Placeholder */}
+              {/* Social Icons — to be replaced with real URLs */}
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-hero-muted hover:text-accent hover:border-accent/50 transition-colors" aria-label="فيسبوك">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
@@ -32,10 +33,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-heading font-semibold text-lg mb-6">روابط سريعة</h4>
             <div className="flex flex-col gap-3">
-              <a href="#hero" className="text-hero-muted hover:text-accent transition-colors w-fit">الرئيسية</a>
-              <a href="#courses" className="text-hero-muted hover:text-accent transition-colors w-fit">الكورسات</a>
-              <a href="#why-teacher" className="text-hero-muted hover:text-accent transition-colors w-fit">عن المدرس</a>
-              <a href="#how-works" className="text-hero-muted hover:text-accent transition-colors w-fit">كيف نتعلم</a>
+              <Link to="/" className="text-hero-muted hover:text-accent transition-colors w-fit">الرئيسية</Link>
+              <Link to="/courses" className="text-hero-muted hover:text-accent transition-colors w-fit">الكورسات</Link>
+              <a href="/#why-teacher" className="text-hero-muted hover:text-accent transition-colors w-fit">عن المدرس</a>
+              <a href="/#how-works" className="text-hero-muted hover:text-accent transition-colors w-fit">كيف نتعلم</a>
             </div>
           </div>
 
@@ -43,8 +44,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-heading font-semibold text-lg mb-6">الدعم</h4>
             <div className="flex flex-col gap-3">
-              <a href="#faq" className="text-hero-muted hover:text-accent transition-colors w-fit">أسئلة شائعة</a>
-              <a href="#" className="text-hero-muted hover:text-accent transition-colors w-fit">تواصل معنا</a>
+              <a href="/#faq" className="text-hero-muted hover:text-accent transition-colors w-fit">أسئلة شائعة</a>
+              <Link to="/support" className="text-hero-muted hover:text-accent transition-colors w-fit">تواصل معنا</Link>
               <a href="#" className="text-hero-muted hover:text-accent transition-colors w-fit">سياسة الخصوصية</a>
               <a href="#" className="text-hero-muted hover:text-accent transition-colors w-fit">الشروط والأحكام</a>
             </div>
@@ -54,9 +55,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-heading font-semibold text-lg mb-6">الكورسات</h4>
             <div className="flex flex-col gap-3">
-              <a href="#" className="text-hero-muted hover:text-accent transition-colors w-fit">الصف الأول الثانوي</a>
-              <a href="#" className="text-hero-muted hover:text-accent transition-colors w-fit">الصف الثاني الثانوي</a>
-              <a href="#" className="text-hero-muted hover:text-accent transition-colors w-fit">الصف الثالث الثانوي</a>
+              <Link to="/course-details/1" className="text-hero-muted hover:text-accent transition-colors w-fit">الصف الأول الثانوي</Link>
+              <Link to="/course-details/2" className="text-hero-muted hover:text-accent transition-colors w-fit">الصف الثاني الثانوي</Link>
+              <Link to="/course-details/3" className="text-hero-muted hover:text-accent transition-colors w-fit">الصف الثالث الثانوي</Link>
             </div>
           </div>
 
